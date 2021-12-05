@@ -1,2 +1,3 @@
-# Smooth Scrolling Everywhere
-1.17.1 port of Smooth Scrolling Everywhere
+## Smooth Scrolling Everywhere
+
+Smooth. Smoother. Smooth Scrolling Everywhere.

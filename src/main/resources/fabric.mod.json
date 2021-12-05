@@ -1,35 +1,33 @@
 {
   "schemaVersion": 1,
   "id": "smoothscrollingeverywhere",
-  "version": "3.0.3-unstable",
+  "version": "${version}",
   "name": "Smooth Scrolling Everywhere",
-  "description": "Adds smooth scrolling to every list.",
+  "description": "Smooth. Smoother. Smooth Scrolling Everywhere.",
   "authors": [
-    "Danielshe"
+    "Danielshe",
+    "booky10"
   ],
+
   "license": "Apache-2.0",
   "icon": "icon.png",
   "environment": "client",
+
+  "accessWidener": "smoothscrollingeverywhere.accesswidener",
   "mixins": [
-    "smoothscrollingeverywhere.mixins.json"
+    "smoothscrollingeverywhere.mixin.json"
   ],
   "entrypoints": {
-    "modmenu": [
-      "me.shedaniel.smoothscrollingeverywhere.SmoothScrollingEverywhereMM"
-    ]
   },
+
   "depends": {
     "fabricloader": ">=0.11.3",
-    "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
+    "minecraft": "1.18",
+    "java": ">=17"
   },
+
   "contact": {
-    "homepage": "https://curseforge.com/minecraft/mc-mods/smooth-scrolling-everywhere-fabric",
-    "sources": "https://github.com/shedaniel/SmoothScrollingEverywhere",
-    "issues": "https://discord.gg/rbxu4Fk"
-  },
-  "custom": {
-	"modmenu:clientsideonly": true
+    "issues": "https://github.com/shedaniel/SmoothScrollingEverywhere/issues/",
+    "sources": "https://github.com/booky10/SmoothScrollingEverywhere/"
   }
 }

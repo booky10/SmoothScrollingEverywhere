@@ -9,24 +9,25 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClothConfigInitializer.class)
-public class MixinClothConfigInitializer {
+public class ClothConfigInitializerMixin {
+
     @Inject(method = "getEasingMethod", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void getEasingMethod(CallbackInfoReturnable<EasingMethod> cir) {
-        cir.setReturnValue(SmoothScrollingEverywhere.getEasingMethod());
+    private static void getEasingMethod(CallbackInfoReturnable<EasingMethod> returnable) {
+        returnable.setReturnValue(SmoothScrollingEverywhere.getEasingMethod());
     }
-    
+
     @Inject(method = "getScrollDuration", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void getScrollDuration(CallbackInfoReturnable<Long> cir) {
-        cir.setReturnValue(SmoothScrollingEverywhere.getScrollDuration());
+    private static void getScrollDuration(CallbackInfoReturnable<Long> returnable) {
+        returnable.setReturnValue(SmoothScrollingEverywhere.getScrollDuration());
     }
-    
+
     @Inject(method = "getScrollStep", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void getScrollStep(CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(SmoothScrollingEverywhere.getScrollStep());
+    private static void getScrollStep(CallbackInfoReturnable<Double> returnable) {
+        returnable.setReturnValue(SmoothScrollingEverywhere.getScrollStep());
     }
-    
+
     @Inject(method = "getBounceBackMultiplier", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void getBounceBackMultiplier(CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(SmoothScrollingEverywhere.getBounceBackMultiplier());
+    private static void getBounceBackMultiplier(CallbackInfoReturnable<Double> returnable) {
+        returnable.setReturnValue(SmoothScrollingEverywhere.getBounceBackMultiplier());
     }
 }

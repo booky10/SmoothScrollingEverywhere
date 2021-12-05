@@ -1,12 +1,12 @@
 {
   "required": true,
   "package": "me.shedaniel.smoothscrollingeverywhere.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [],
   "client": [
-    "EntryListWidgetAccessor",
-    "MixinEntryListWidget",
-    "MixinClothConfigInitializer"
+    "AbstractSelectionListAccessor",
+    "AbstractSelectionListMixin",
+    "ClothConfigInitializerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
