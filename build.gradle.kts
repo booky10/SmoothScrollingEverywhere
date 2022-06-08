@@ -1,8 +1,8 @@
 import java.io.ByteArrayOutputStream
 
 plugins {
-    id("fabric-loom") version "0.10-SNAPSHOT"
-    `maven-publish`
+    id("fabric-loom") version "0.12-SNAPSHOT"
+    id("maven-publish")
 }
 
 fun getGitCommit(): String {
@@ -15,7 +15,7 @@ fun getGitCommit(): String {
 }
 
 val archivesBaseName = "SmoothScrollingEverywhere"
-version = "3.1.3+fabric.${getGitCommit()}"
+version = "3.2.0+fabric.${getGitCommit()}"
 group = "me.shedaniel"
 
 repositories {
@@ -23,16 +23,15 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.18")
+    minecraft("com.mojang:minecraft:1.19")
     mappings(loom.officialMojangMappings())
 
-    modImplementation("net.fabricmc:fabric-loader:0.12.6")
+    modImplementation("net.fabricmc:fabric-loader:0.14.6")
     modImplementation(include("me.shedaniel.cloth:cloth-config-fabric:6.0.45")!!)
 }
 
 java {
     withSourcesJar()
-    withJavadocJar()
 
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
